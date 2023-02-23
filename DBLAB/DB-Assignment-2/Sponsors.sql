@@ -1,0 +1,34 @@
+CREATE TABLE Sponsors
+(
+    EID INT NOT NULL REFERENCES Events ON DELETE NO ACTION ON UPDATE CASCADE,
+    OID INT NOT NULL REFERENCES Events ON DELETE NO ACTION ,
+    Amount INT,
+    PRIMARY KEY (EID, OID)
+);
+
+-- DROP TABLE Sponsors;
+
+SELECT *
+FROM Sponsors;
+
+--Insert
+INSERT INTO Sponsors
+VALUES(
+        1, 2, 20000
+);
+INSERT INTO Sponsors
+VALUES(
+        2, 2, 30000
+);
+INSERT INTO Sponsors
+VALUES(
+        3, 3, 30000
+);
+INSERT INTO Sponsors
+VALUES(
+        4, 1, 50000
+);
+INSERT INTO Sponsors
+VALUES(
+        5, 1, 20000
+);
