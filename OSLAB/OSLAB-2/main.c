@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-
 // #include <stdbool.h>
 // #include "functions.c"
 #include "header.h"

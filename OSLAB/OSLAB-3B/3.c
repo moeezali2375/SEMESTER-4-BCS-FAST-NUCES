@@ -39,8 +39,8 @@ int main(int argc, char *argv[])
             printf("The array is: \n%s\n", argv[1]);
             printf("The size of the array is: %lu\n", strlen(argv[1]));
             // TODO exec functions to be corrected here
-            // if (execvp("ls", NULL))
-            ;
+            if (execvp("ls", NULL))
+                ;
             // if (execl("/Users/moeezali/Documents/VS/SEMESTER#4/OSLAB/OSLAB-3B/33", argv[1]) < 0)
             // {
             // printf("error!\n");
