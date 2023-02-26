@@ -10,16 +10,14 @@
 
 #include <iostream>
 using namespace std;
-int max_sum = INT_MIN;
-int start_index = -1;
-int end_index = -1;
+int MAX = INT_MIN;
 int maximum_subarray(int array[], int start, int mid, int end)
 {
     int sum;
     // MAX_LEFT_SUM
     sum = 0;
     int i = mid;
-    int max_left = array[i];
+    int max_left = INT_MIN;
     int max_left_start = i;
     int max_left_end = i;
     while (i >= start)
@@ -35,7 +33,7 @@ int maximum_subarray(int array[], int start, int mid, int end)
     // MAX_RIGHT_SUM
     sum = 0;
     i = mid + 1;
-    int max_right = array[i];
+    int max_right = INT_MIN;
     int max_right_start = i;
     int max_right_end = i;
     while (i <= end)
@@ -57,16 +55,17 @@ int maximum_subarray(int array[], int start, int mid, int end)
     return max_right;
 }
 
-int function1(int array[], int start, int end)
+void function1(int array[], int start, int end)
 {
     if (start < end)
     {
         int mid = (start + end) / 2;
         function1(array, start, mid);
         function1(array, mid + 1, end);
-        return maximum_subarray(array, start, mid, end);
+        int new_max = maximum_subarray(array, start, mid, end);
+        if (new_max > MAX)
+            MAX = new_max;
     }
-    return -1;
 }
 int main()
 {
@@ -80,5 +79,6 @@ int main()
     cout << endl;
     int start = 0;
     int end = 0;
-    cout << "Maximum sum is: " << function1(array, start, size - 1);
+    function1(array, start, size - 1);
+    cout << "MAX SUM IS: " << MAX << endl;
 }
