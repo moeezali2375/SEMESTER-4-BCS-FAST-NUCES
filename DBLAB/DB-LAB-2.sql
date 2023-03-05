@@ -6,6 +6,7 @@ CREATE TABLE student
     student_name VARCHAR (20),
     gender char (1),
     phone varchar (13)
+    PRIMARY key (roll_number),
 );
 SELECT *
 FROM student;

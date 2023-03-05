@@ -38,8 +38,7 @@ void merge(int array[], int low, int high)
 
 int main()
 {
-    int array[] = {9, 5, 100, 2, 0};
-    int size = 5;
+    int array[] = {9, 5, 100, 2, 1};
 
     cout << "Before sorting: ";
     for (int i = 0; i < size; i++)

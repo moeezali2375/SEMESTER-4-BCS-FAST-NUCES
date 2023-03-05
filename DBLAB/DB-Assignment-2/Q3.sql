@@ -15,9 +15,9 @@ FROM Participants
 WHERE Gender='Female' AND B_date>'1998-01-01';
 
 --4
-SELECT O_name, Count(O_name) AS 'Total Events'
+SELECT O_name,organizations.OID ,Count(O_name) AS 'Total Events'
 FROM (Organizations JOIN Sponsors on Organizations.OID=Sponsors.OID)
-GROUP BY O_name
+GROUP BY O_name,Organizations.OID
 HAVING COUNT(O_name)>0;
 
 --5

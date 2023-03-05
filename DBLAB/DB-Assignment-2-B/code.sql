@@ -204,7 +204,6 @@ VALUES(
         5, 1
 );
 
-
 create database evaluation;
 
 --1
@@ -219,7 +218,7 @@ WHERE startdate='2023-01-03';
 --3
 SELECT pname
 FROM Participant
-WHERE Gender='Female' AND bdate>'1998-01-01';
+WHERE Gender!='Female' AND bdate>'1998-01-01';
 
 --4
 SELECT oname, Count(oname) AS 'Total event'
