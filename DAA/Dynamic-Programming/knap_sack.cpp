@@ -9,7 +9,7 @@ int search(int key, int array[], int size)
     }
     return 0;
 }
-void knap_snack_table(int weights[], int profits[], int size, int capacity)
+void knap_sack_table(int weights[], int profits[], int size, int capacity)
 {
     int **table = new int *[size + 1];
     for (int i = 0; i < size + 1; i++)
@@ -76,5 +76,5 @@ int main()
     int profits[] = {1, 2, 5, 6};
     int capacity = 8;
     int size = 4;
-    knap_snack_table(weights, profits, size, capacity);
+    knap_sack_table(weights, profits, size, capacity);
 }
